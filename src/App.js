@@ -10,6 +10,9 @@ function App() {
         <p>
           <code>Welcome to Risetku.com</code>
         </p>
+        <p>
+          By Elvan and Febrilian
+        </p>
       </header>
     </div>
   );
