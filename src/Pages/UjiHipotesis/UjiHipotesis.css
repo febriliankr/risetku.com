@@ -40,10 +40,10 @@
   font-weight: 300;
 }
 
-.landing__buttons {
+.uji-hipotesis__buttons {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 430px;
 }
 
 .landing__ask {

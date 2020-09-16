@@ -91,13 +91,6 @@
     position: relative;
   }
 
-  .navbar__logo {
-    max-width: 70px;
-    position: absolute;
-    top: 0;
-    margin-left: 10px;
-  }
-
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -143,7 +136,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(30px, -10px);
+    transform: translate(30px, 20px);
   }
 
   .menu-icon {

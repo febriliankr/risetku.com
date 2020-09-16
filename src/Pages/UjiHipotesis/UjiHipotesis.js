@@ -17,7 +17,7 @@ function UjiHipotesis() {
           uji hipotesis yang tepat, kita mampu untuk menentukan apakah hipotesis
           kita diterima atau tidak.
         </p>
-        <div className="landing__buttons">
+        <div className="uji-hipotesis__buttons">
           <Link to="/uji-hipotesis">
             <Button buttonStyle="btn--evoblue">Mulai Uji Hipotesis</Button>
           </Link>
