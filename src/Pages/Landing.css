@@ -6,7 +6,7 @@
 .landing__container {
   background-color: #1b1b1b;
   padding-top: 4rem;
-  
+  background-image: url(https://obsidian.md/images/starfield.svg);
   min-height: 100vh;
 }
 
@@ -23,11 +23,12 @@
 }
 
 .landing__text-header{
-  font-size: 30px;
+  font-size: 50px;
   margin-bottom: 10px;
+  font-weight: 800;
   max-width: 900px;
-
-  background: -webkit-linear-gradient(45deg, #15a4f7, #17ffd8 80%);
+  background: #fff;
+  /* background: -webkit-linear-gradient(45deg, #15a4f7, #17ffd8 80%); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

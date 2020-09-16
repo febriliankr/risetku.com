@@ -32,8 +32,8 @@ function Navbar() {
     <div className="navbar">
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src='logo192.png' alt="dcu 2020" className="navbar-icon"/>
-          <h1>Risetku</h1>
+          <img src='favicon.svg' alt="Logo" className="navbar-icon"/>
+          <div className="logo-title">RISETKU</div>
           
         </Link>
         <div className="menu-icon" onClick={handleClick}>
