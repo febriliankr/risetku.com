@@ -1,0 +1,28 @@
+import React from "react";
+import "./Landing.css";
+import { Link } from "react-router-dom";
+import { Button } from "../components/Button/Button";
+
+function Landing() {
+  return (
+    <div className="landing__container">
+      <section className="landing__text">
+        <h1 className="landing__text-header gradient-text">
+          Aplikasi untuk memudahkan analisis penelitian Anda
+        </h1>
+        <p className="landing__text-description">
+          Hitung besar sampel, tentukan jenis uji hipotesis, dan konsultasi
+          mengenai penelitian anda.
+        </p>
+        <div className="landing__buttons">
+          <Button buttonStyle="btn--evoblue">Uji Hipotesis</Button>
+          <Button buttonStyle="btn--evoblue">Hitung Besar Sampel</Button>
+        </div>
+        <Link to="/" className="landing__ask">Saya belum tau apa yang harus dilakukan</Link>
+        <img src="images/cover-vector.svg" alt="Research Illustration" className="landing__image"/>
+      </section>
+    </div>
+  );
+}
+
+export default Landing;

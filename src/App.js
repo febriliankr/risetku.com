@@ -1,20 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Landing from "./Pages/Landing";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>Welcome to Risetku.com</code>
-        </p>
-        <p>
-          By Elvan and Febrilian
-        </p>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Landing}/>
+        </Switch>
+        <Footer/>
+      </BrowserRouter>
+    </>
   );
 }
 
