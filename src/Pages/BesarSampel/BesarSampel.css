@@ -3,20 +3,18 @@
   --light-gray-text: #e9e9e9;
 }
 
-.uji-hipotesis__container {
-  background-color: #1b1b1b;
-  padding-top: 150px;
-  background-image: url(https://obsidian.md/images/starfield.svg);
-  min-height: calc(80vh - 100px);
-}
 
-.uji-hipotesis__text {
+
+.subsection__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 50px 20px 50px;
+  align-items: left;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0 auto 20px auto;
+  max-width: 650px;
   padding: 14px;
   color: var(--light-gray-text);
   line-height: 1.5;
@@ -67,4 +65,8 @@
   }
 }
 
-
+.subsection__container {
+  background-color: #272727;
+  padding: 3rem;
+  
+}
