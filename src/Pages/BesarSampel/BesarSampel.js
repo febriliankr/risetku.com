@@ -27,6 +27,7 @@ function BesarSampel() {
 
     </div>
     <div className="subsection__container">
+        <h2 className="subsection__title">Apa itu besar sampel?</h2>
         <p className="subsection__text">
           Dalam memulai suatu penelitian, peneliti tentu perlu menentukan sampel
           penelitiannya. Salah satu hal yang paling penting untuk ditentukan

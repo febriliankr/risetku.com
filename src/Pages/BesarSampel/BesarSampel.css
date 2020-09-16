@@ -70,3 +70,8 @@
   padding: 3rem;
   
 }
+
+.subsection__title{
+  text-align: center;
+  font-size: 40px;
+}
