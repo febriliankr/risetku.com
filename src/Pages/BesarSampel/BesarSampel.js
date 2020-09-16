@@ -17,7 +17,7 @@ function BesarSampel() {
         </p>
 
         <div className="uji-hipotesis__buttons">
-          <Link to="/hitung-besar-sampel/calculate">
+          <Link to="/hitung-besar-sampel/mulai">
             <Button buttonStyle="btn--evoblue">
               Mulai Hitung Besar Sampel
             </Button>
