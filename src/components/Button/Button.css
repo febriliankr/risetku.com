@@ -67,19 +67,21 @@
 
 /* official evoblue */
 .btn--evoblue {
-  border-radius: 50px;
-  transition: 0.3s;
+  border-radius: 5px;
   border: 1.5px solid rgb(138, 138, 138);
   background: transparent;
   color: #fff;
   font-weight: 400;
+  transition: 0.4s;
+  
 }
 
 .btn--evoblue:hover {
   /* border: 2px solid #26a0da; */
-  background: linear-gradient(30deg, rgb(90, 189, 255) 0%, rgb(71, 104, 180) 100%);
+  border: 1.5px solid rgb(47, 163, 240);
+
+  background: linear-gradient(30deg, rgb(47, 163, 240) 0%, rgb(24, 175, 150) 100%);
   /* background: #26a0da; */
   color: #fff;
-  y: 100;
   box-shadow: 0px 0px 12px 0px rgba(38, 161, 218, 0.4);
 }
