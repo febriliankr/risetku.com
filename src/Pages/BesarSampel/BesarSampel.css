@@ -20,39 +20,6 @@
   line-height: 1.5;
 }
 
-.uji-hipotesis__text-header{
-  font-size: 30px;
-  margin-bottom: 10px;
-  font-weight: 800;
-  max-width: 900px;
-  background: #fff;
-  /* background: -webkit-linear-gradient(45deg, #15a4f7, #17ffd8 80%); */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.uji-hipotesis__text-description{
-  font-size: 18px;
-  margin-top: 0;
-  max-width: 900px;
-  font-weight: 300;
-}
-
-.uji-hipotesis__buttons {
-  display: flex;
-  justify-content: space-evenly;
-  width: 430px;
-}
-
-.uji-hipotesis__ask {
-  margin: 20px 10px 10px;
-  text-decoration: none;
-  color: var(--gray-text);
-  cursor: help;
-  font-size: 14px;
-  
-}
-
 .landing__image{
   margin: 100px 0 300px;
   max-width: 700px;

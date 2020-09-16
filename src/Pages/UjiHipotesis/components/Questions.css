@@ -1,0 +1,23 @@
+.questions {
+    border-radius: 10px;
+    border: 0px solid white;
+    background-color: transparent;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto 0;
+    padding: 10px 40px;
+}
+
+.questions__question {
+    font-size: 22px;
+}
+
+.questions__options {
+    display: flex;
+    padding: 10px;
+}
+
+.questions__option-buttons {
+    padding: 0 10px 0;
+}
+

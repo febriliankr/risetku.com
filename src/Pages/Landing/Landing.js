@@ -7,7 +7,7 @@ function Landing() {
   return (
     <div className="landing__container">
       <section className="landing__text">
-        <h1 className="landing__text-header gradient-text">
+        <h1 className="landing__text-header">
           Aplikasi untuk memudahkan analisis penelitian Anda
         </h1>
         <p className="landing__text-description">

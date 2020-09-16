@@ -8,7 +8,7 @@ function BesarSampel() {
     <>
     <div className="uji-hipotesis__container">
       <section className="uji-hipotesis__text">
-        <h1 className="uji-hipotesis__text-header gradient-text">
+        <h1 className="uji-hipotesis__text-header">
           Hitung Besar Sampel
         </h1>
         <p className="uji-hipotesis__text-description">
