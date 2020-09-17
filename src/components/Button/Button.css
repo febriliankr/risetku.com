@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 960px) {
   .btn--evoblue {
-    max-width: 100% !important;
+    max-width: fit-content !important;
   }
 }
 

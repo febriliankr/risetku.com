@@ -55,10 +55,10 @@
   
 }
 
-@media screen and (max-width: 820px) {
-  .landing__buttons {
-    flex-direction: column;
-    height: 100px;
+@media screen and (max-width: 420px) {
+
+  .uji-hipotesis__text {
+    margin: auto;
   }
 }
 

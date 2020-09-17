@@ -15,11 +15,21 @@ function Landing() {
           mengenai penelitian anda.
         </p>
         <div className="landing__buttons">
-        <Link to="/uji-hipotesis"><Button buttonStyle="btn--evoblue">Uji Hipotesis</Button></Link>
-        <Link to="/hitung-besar-sampel"><Button buttonStyle="btn--evoblue">Hitung Besar Sampel</Button></Link>
+          <Link to="/uji-hipotesis">
+            <Button buttonStyle="btn--evoblue">Uji Hipotesis</Button>
+          </Link>
+          <Link to="/hitung-besar-sampel">
+            <Button buttonStyle="btn--evoblue">Hitung Besar Sampel</Button>
+          </Link>
         </div>
-        <Link to="/konsultasi" className="landing__ask">Saya belum tau apa yang harus dilakukan</Link>
-        <img src="images/astronaut-illustration.svg" alt="Research Illustration" className="landing__image"/>
+        <Link to="/konsultasi" className="landing__ask">
+          Saya belum tau apa yang harus dilakukan
+        </Link>
+        <img
+          src="images/astronaut-illustration.svg"
+          alt="Research Illustration"
+          className="landing__image"
+        />
       </section>
     </div>
   );

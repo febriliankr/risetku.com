@@ -33,11 +33,41 @@
   -webkit-text-fill-color: transparent; */
 }
 
+
+
 .landing__text-description{
   font-size: 22px;
   margin-top: 0;
   max-width: 650px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+  .landing__text-header {
+    text-align: left;
+    font-size: 30px;
+  }
+  .landing__text-description{
+    font-size: 18px;
+    text-align: left;
+    
+  }
+  .landing__text{
+    margin-left: 5px;
+  }
+  .landing__buttons{
+    text-align: left;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .landing__ask{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 0px;
+    
+  }
 }
 
 .landing__buttons {
@@ -50,7 +80,7 @@
   margin: 20px 10px 10px;
   text-decoration: underline;
   color: var(--gray-text);
-  cursor: help;
+  cursor: pointer;
   font-size: 16px;
   
 }
@@ -60,11 +90,5 @@
   max-width: 1000px;
 }
 
-@media screen and (max-width: 820px) {
-  .landing__buttons {
-    flex-direction: column;
-    height: 100px;
-  }
-}
 
 
