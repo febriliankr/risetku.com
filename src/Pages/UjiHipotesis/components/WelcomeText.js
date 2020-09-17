@@ -2,16 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../../components/Button/Button";
 
-const osdsad = {
-  1: "Satu",
-  2: "Kategorik",
-  3: "Dua kelompok (Dikotom)",
-  4: "Tidak Berpasangan",
-  5: "Dua atau lebih",
-  6: "Numerik",
-  7: "Tidak Normal",
-};
-
 function WelcomeText({
   setMulai,
   title,
