@@ -219,7 +219,7 @@ const dataMatchAll = {
   },
   data19: {
     answer: {
-      1: "Dua atau lebih",
+      1: "Dua atau lebih",
       2: "Kategorik",
       3: "dikotom/polikotom",
       4: "Tidak Berpasangan",
@@ -231,7 +231,7 @@ const dataMatchAll = {
   },
   data20: {
     answer: {
-      1: "Dua atau lebih",
+      1: "Dua atau lebih",
       2: "Kategorik",
       3: "dikotom/polikotom",
       4: "Tidak Berpasangan",
@@ -243,7 +243,7 @@ const dataMatchAll = {
   },
   data21: {
     answer: {
-      1: "Dua atau lebih",
+      1: "Dua atau lebih",
       2: "Kategorik",
       3: "dikotom/polikotom",
       4: "Tidak Berpasangan",
@@ -254,8 +254,9 @@ const dataMatchAll = {
     uji: "regresi logistik faktorial",
   },
   data22: {
+    cek: "Dua atau lebih",
     answer: {
-      1: "Dua atau lebih",
+      1: "Dua atau lebih",
       2: "Numerik",
       3: "",
       4: "",
@@ -267,7 +268,7 @@ const dataMatchAll = {
   },
   data23: {
     answer: {
-      1: "Dua atau lebih",
+      1: "Dua atau lebih",
       2: "Numerik",
       3: "",
       4: "",
