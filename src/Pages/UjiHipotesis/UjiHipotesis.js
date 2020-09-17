@@ -34,21 +34,18 @@ function UjiHipotesis() {
     }
   }, [answers]);
 
-  useEffect(() => {
+  const selesaiCleanup = () => {
     if (!show34) {
-      setAnswers({ ...answers, 
-        3: "", 
-        4: "" 
-      });
+      setAnswers({ ...answers, 3: "", 4: "" });
     }
-    
+
     if (!show7) {
       setAnswers({
         ...answers,
         7: "",
       });
     }
-  }, [selesai]);
+  };
 
   const [questions, setQuestions] = useState(dataQuestions);
 
@@ -100,6 +97,7 @@ function UjiHipotesis() {
           onClick={() => {
             setSelesai(true);
             setMulai(false);
+            selesaiCleanup();
           }}
         >
           Selesai
