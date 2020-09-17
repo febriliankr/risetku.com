@@ -46,13 +46,14 @@ const dataMatchAll = {
       7: "",
     },
     uji: "Chi-square Test",
-    description: "Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square",
+    description:
+      "Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square",
   },
   data5: {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Numerik",
@@ -64,7 +65,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Numerik",
@@ -76,7 +77,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Numerik",
@@ -88,7 +89,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Kategorik",
@@ -136,7 +137,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Berpasangan",
       5: "Satu",
       6: "Numerik",
@@ -148,7 +149,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Berpasangan",
       5: "Satu",
       6: "Numerik",
@@ -160,7 +161,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Berpasangan",
       5: "Satu",
       6: "Numerik",
@@ -172,7 +173,7 @@ const dataMatchAll = {
     answer: {
       1: "Satu",
       2: "Kategorik",
-      3: "Lebih dari 2 kelompok (Polikotom)",
+      3: "Lebih dari 2 kelompok (Polikotom)",
       4: "Berpasangan",
       5: "Satu",
       6: "Kategorik",
