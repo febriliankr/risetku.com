@@ -10,12 +10,10 @@
 
 @media screen and (max-width: 800px) {
   .questions {
-    transform: scale(0.94);
     background-color: transparent;
-    width: 300px;
-    min-height: 300px;
-    margin: 0 auto 0;
-    padding: 30px 40px;
+    max-width: 75%;
+    margin: 10px 4px 5px;
+    padding: 20px 3px 35px auto;
   }
 }
 

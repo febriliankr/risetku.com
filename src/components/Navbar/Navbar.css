@@ -94,12 +94,12 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: calc(100% - 40px);
     position: absolute;
     margin: 0 0;
     top: 80px;
     opacity: 0;
-    left: 0;
+    left: 0px;
     transition: 0.3s ease-out ;
     border-bottom: 1px solid rgb(41, 41, 41);
   }
