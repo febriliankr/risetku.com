@@ -33,7 +33,7 @@ const dataMatchAll = {
       6: "Kategorik",
       7: "",
     },
-    uji: "Chi-square test",
+    uji: "Chi-square Test",
   },
   data4: {
     answer: {
@@ -45,7 +45,8 @@ const dataMatchAll = {
       6: "Kategorik",
       7: "",
     },
-    uji: "Fisher’s exact test (bila tidak memenuhi syarat chi-square)",
+    uji: "Chi-square Test",
+    description: "Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square",
   },
   data5: {
     answer: {
