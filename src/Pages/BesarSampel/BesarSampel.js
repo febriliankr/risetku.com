@@ -12,56 +12,60 @@ function UjiHipotesis() {
     1: "",
     2: "",
     3: "",
+    4: "",
+    5: "",
+    6: "",
+    7: "",
   });
   const [questions, setQuestions] = useState(dataQuestionsBesarSampel);
 
   useEffect(() => {
-    console.log('answers', answers)
-  }, [answers])
+    console.log("answers", answers);
+  }, [answers]);
 
   return (
     <>
-    <div className="uji-hipotesis__container">
-      {mulai ? (
-        Object.keys(questions).map((q) => {
-          return (
-            <>
-              <Questions
-                number={questions[q].number}
-                setQuestions={setQuestions}
-                questions={questions}
-                answers={answers}
-                setAnswers={setAnswers}
-                question={questions[q].question}
-                options={questions[q].options}
-              />
-            </>
-          );
-        })
-      ) : (
-        <WelcomeText
-          setMulai={setMulai}
-          selesai={selesai}
-          answers={answers}
-          buttonText="Mulai Hitung Besar Sampel"
-          title="Hitung Besar Sampel"
-          description="Temukan rumus besar sampel yang cocok untuk penelitianmu dan hitung
+      <div className="uji-hipotesis__container">
+        {mulai ? (
+          Object.keys(questions).map((q) => {
+            return (
+              <>
+                <Questions
+                  number={questions[q].number}
+                  setQuestions={setQuestions}
+                  questions={questions}
+                  answers={answers}
+                  setAnswers={setAnswers}
+                  question={questions[q].question}
+                  options={questions[q].options}
+                />
+              </>
+            );
+          })
+        ) : (
+          <WelcomeText
+            setMulai={setMulai}
+            selesai={selesai}
+            answers={answers}
+            buttonText="Mulai Hitung Besar Sampel"
+            title="Hitung Besar Sampel"
+            description="Temukan rumus besar sampel yang cocok untuk penelitianmu dan hitung
           jumlahnya dengan menjawab beberapa pertanyaan berikut!"
-        />
-      )}
-      {mulai ? (
-        <div
-          className="selesai__button"
-          onClick={() => {
-            setSelesai(true);
-            setMulai(false);
-          }}
-        >
-          Selesai
-        </div>
-      ) : null}
-    </div>
-    <div className="subsection__container">
+          />
+        )}
+        {mulai ? (
+          <div
+            className="selesai__button"
+            onClick={() => {
+              setSelesai(true);
+              setMulai(false);
+            }}
+          >
+            Selesai
+          </div>
+        ) : null}
+      </div>
+      <div className="subsection__container">
         <h2 className="subsection__title">Apa itu besar sampel?</h2>
         <p className="subsection__text">
           Dalam memulai suatu penelitian, peneliti tentu perlu menentukan sampel

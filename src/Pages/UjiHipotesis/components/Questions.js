@@ -11,9 +11,11 @@ function Questions({
   questions,
   answers,
   setAnswers,
+  onChange
 }) {
 
   const handleClick = (option, number) => {
+    
     console.log("option: ", option);
     console.log("number: ", number);
     // answers[number] = option;
@@ -22,8 +24,6 @@ function Questions({
       ...answers,
       [number]: option,
     });
-
-    console.log("As: ", answers);
   };
 
   return (
