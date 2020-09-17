@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../../../components/Button/Button";
 
 function WelcomeText({ setMulai, title, description, selesai, answers }) {
+  window.scrollTo(0, 0);
   return (
     <>
       <section className="uji-hipotesis__text">
