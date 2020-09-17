@@ -27,7 +27,7 @@ const dataQuestions = {
   },
   6: {
     number: 6,
-    question: "Apakah data numerik Andra berdistribusi normal?",
+    question: "Apakah data numerik Anda berdistribusi normal?",
     options: ["Ya", "Tidak"],
   },
   

@@ -54,7 +54,7 @@
 
 .questions__button {
   border-radius: 5px;
-  border: 1.5px solid rgb(138, 138, 138);
+  border: 1.5px solid rgba(138, 138, 138, 0.219);
   background: transparent;
   color: rgb(238, 238, 238);
   font-weight: 400;

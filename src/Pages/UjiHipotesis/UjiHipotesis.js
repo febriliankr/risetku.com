@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import "./UjiHipotesis.css";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
-import dataQuestions from "./dataQuestions"
+import dataQuestions from "./dataQuestions";
 
 function UjiHipotesis() {
+  const [selesai, setSelesai] = useState(false);
   const [mulai, setMulai] = useState(false);
   const [answers, setAnswers] = useState({
-    1: '',
-    2: '',
-    3: '',
+    1: "",
+    2: "",
+    3: "",
   });
   const [questions, setQuestions] = useState(dataQuestions);
 
@@ -32,20 +33,27 @@ function UjiHipotesis() {
           );
         })
       ) : (
-        <WelcomeText setMulai={setMulai} />
+        <WelcomeText
+          setMulai={setMulai}
+          selesai={selesai}
+          answers={answers}
+          title="Uji Hipotesis"
+          description="Uji hipotesis adalah metode pengambilan keputusan dari suatu hipotesis
+          penelitian. Uji hipotesis yang tepat dapat menentukan apakah hipotesis
+          kita diterima atau tidak."
+        />
       )}
-      {/* 
-      {Object.keys(questions).map((q) => {
-        return (
-          <>
-            <Questions
-              setAnswers={setQuestions}
-              question={questions[q].question}
-              options={questions[q].options}
-            />
-          </>
-        );
-      })} */}
+      {mulai ? (
+        <div
+          className="selesai__button"
+          onClick={() => {
+            setSelesai(true);
+            setMulai(false);
+          }}
+        >
+          Selesai
+        </div>
+      ) : null}
     </div>
   );
 }
