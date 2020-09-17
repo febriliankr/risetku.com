@@ -43,7 +43,7 @@
 .uji-hipotesis__buttons {
   display: flex;
   justify-content: space-evenly;
-  width: 430px;
+  max-width: 430px;
 }
 
 .uji-hipotesis__ask {
