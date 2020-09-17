@@ -57,7 +57,6 @@ function UjiHipotesis() {
       //console.log(dataMatchAll[match].answer);
       if (JSON.stringify(dataMatchAll[match].answer)  === JSON.stringify(answers)) {
         setOutputToPage(JSON.stringify(dataMatchAll[match].uji))
-        alert("berhasil!", outputToPage);
       } else {
       console.log('dataMatchAll[match].uji', dataMatchAll[match].uji)
         // console.log(JSON.stringify(dataMatchAll[match].answer));
