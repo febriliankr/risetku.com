@@ -1,22 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UjiHipotesis.css";
-import { useLocation } from "react-router-dom";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
 
 function UjiHipotesis() {
-  const location = useLocation();
-  const question = "Berapa jumlah variabel bebas Anda?";
-  const options = ["Satu", "Dua atau lebih"];
+
+  const [mulai, setMulai] = useState(false);
+
+  const [questions, setQuestions] = useState({
+    '1': {
+      number: 1,
+      question: "Berapa jumlah variabel bebas Anda?",
+      options: ["Satu", "Dua atau lebih"],
+      answer: [],
+    },
+    '2': {
+      number: 2,
+      question: "Apakah variabel bebasmu terdiri dari 2 kelompok atau lebih dari 2 kelompok?",
+      options: ["Dua kelompok (Dikotom)", "Dua atau lebih (Polikotom)"],
+      answer: [],
+    },
+    '3': {
+      number: 3,
+      question: "Apakah variabel bebasmu berpasangan atau tidak berpasangan?",
+      options: ["Satu", "Dua atau lebih"],
+      answer: [],
+    },
+  });
+
+
   return (
     <div className="uji-hipotesis__container">
-      
-        {location.pathname === "/uji-hipotesis/mulai" ? (
-          <Questions question={question} options={options} />
-        ) : (
-          <WelcomeText />
-        )}
-      
+      {mulai ? (
+        Object.keys(questions).map((q) => {
+
+          return (
+            <>
+              <Questions
+                number={questions[q].number}
+                setAnswers={setQuestions}
+                question={questions[q].question}
+                options={questions[q].options}
+              />
+            </>
+          );
+        })
+      ) : (
+        <WelcomeText setMulai={setMulai} />
+      )}
+{/* 
+      {Object.keys(questions).map((q) => {
+        return (
+          <>
+            <Questions
+              setAnswers={setQuestions}
+              question={questions[q].question}
+              options={questions[q].options}
+            />
+          </>
+        );
+      })} */}
     </div>
   );
 }

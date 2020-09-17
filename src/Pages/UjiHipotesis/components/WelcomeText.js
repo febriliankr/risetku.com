@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../../components/Button/Button";
 
-function WelcomeText() {
+function WelcomeText({ setMulai }) {
   return (
     <>
       <section className="uji-hipotesis__text">
@@ -14,9 +14,9 @@ function WelcomeText() {
         </p>
 
         <div className="uji-hipotesis__buttons">
-          <Link to="/uji-hipotesis/mulai">
-            <Button buttonStyle="btn--evoblue">Mulai Uji Hipotesis</Button>
-          </Link>
+          <Button onClick={() => setMulai(true)} buttonStyle="btn--evoblue">
+            Mulai Uji Hipotesis
+          </Button>
         </div>
         <Link to="/konsultasi" className="uji-hipotesis__ask">
           *juga disebut uji signifikansi, uji p-value, konfirmasi analisis data,
