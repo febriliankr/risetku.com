@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./UjiHipotesis.css";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
+import dataQuestions from "./dataQuestions"
 
 function UjiHipotesis() {
   const [mulai, setMulai] = useState(false);
@@ -10,27 +11,7 @@ function UjiHipotesis() {
     2: '',
     3: '',
   });
-  const [questions, setQuestions] = useState({
-    1: {
-      number: 1,
-      question: "Berapa jumlah variabel bebas Anda?",
-      options: ["Satu", "Dua atau lebih"],
-      answer: "",
-    },
-    2: {
-      number: 2,
-      question:
-        "Apakah variabel bebasmu terdiri dari 2 kelompok atau lebih dari 2 kelompok?",
-      options: ["Dua kelompok (Dikotom)", "Dua atau lebih (Polikotom)"],
-      answer: "",
-    },
-    3: {
-      number: 3,
-      question: "Apakah variabel bebasmu berpasangan atau tidak berpasangan?",
-      options: ["Satu", "Dua atau lebih"],
-      answer: "",
-    },
-  });
+  const [questions, setQuestions] = useState(dataQuestions);
 
   return (
     <div className="uji-hipotesis__container">
