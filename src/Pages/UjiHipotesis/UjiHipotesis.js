@@ -3,8 +3,11 @@ import "./UjiHipotesis.css";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
 import dataQuestions from "./dataQuestions";
+import dataMatchAll from "./dataMatchAll";
+
 
 function UjiHipotesis() {
+  const [outputToPage, setOutputToPage] = useState('');
   const [selesai, setSelesai] = useState(false);
   const [mulai, setMulai] = useState(false);
 
@@ -45,13 +48,27 @@ function UjiHipotesis() {
         7: "",
       });
     }
+    determineUjiHipotesis();
   };
 
-  const [questions, setQuestions] = useState(dataQuestions);
+  function determineUjiHipotesis() {
+    console.log("MENENTUKAN: ", answers);
+    Object.keys(dataMatchAll).map((match) => {
+      //console.log(dataMatchAll[match].answer);
+      if (JSON.stringify(dataMatchAll[match].answer)  === JSON.stringify(answers)) {
+        setOutputToPage(JSON.stringify(dataMatchAll[match].uji))
+        alert("berhasil!", outputToPage);
+      } else {
+      console.log('dataMatchAll[match].uji', dataMatchAll[match].uji)
+        // console.log(JSON.stringify(dataMatchAll[match].answer));
+        // console.log(JSON.stringify(answers));
+      }
+    
+    return null;
+    });
+  }
 
-  useEffect(() => {
-    console.log("answers", answers);
-  }, [answers]);
+  const [questions, setQuestions] = useState(dataQuestions);
 
   return (
     <div className="uji-hipotesis__container">
@@ -82,6 +99,7 @@ function UjiHipotesis() {
         })
       ) : (
         <WelcomeText
+          outputToPage={outputToPage}
           setMulai={setMulai}
           selesai={selesai}
           answers={answers}

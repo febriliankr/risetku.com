@@ -14,12 +14,12 @@ const dataQuestions = {
     number: 3,
     question:
       "Apakah variabel bebas Anda terdiri dari 2 kelompok atau lebih dari 2 kelompok?",
-    options: ["Dua kelompok (Dikotom)", "Dua atau lebih (Polikotom)"],
+    options: ["Dua kelompok (Dikotom)", "Lebih dari 2 kelompok (Polikotom)"],
   },
   4: {
     number: 4,
     question: "Apakah variabel bebas Anda berpasangan atau tidak berpasangan?",
-    options: ["Satu", "Dua atau lebih"],
+    options: ["Berpasangan", "Tidak Berpasangan"],
   },
   5: {
     number: 5,
@@ -34,7 +34,7 @@ const dataQuestions = {
   7: {
     number: 7,
     question: "Apakah data numerik Anda berdistribusi normal?",
-    options: ["Ya", "Tidak"],
+    options: ["Normal", "Tidak Normal"],
   },
   
 };

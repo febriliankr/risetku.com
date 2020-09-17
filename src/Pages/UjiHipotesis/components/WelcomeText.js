@@ -2,13 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../../components/Button/Button";
 
-function WelcomeText({ setMulai, title, description, selesai, answers }) {
+function WelcomeText({ setMulai, title, description, selesai, answers, outputToPage }) {
+  
   window.scrollTo(0, 0);
   return (
     <>
       <section className="uji-hipotesis__text">
         {selesai ? (
-          <h3>{JSON.stringify(answers)}</h3>
+          <>
+          <h3>{outputToPage}</h3>
+          <p>{JSON.stringify(answers)}</p>
+          </>
         ) : (
           <>
             <h1 className="uji-hipotesis__text-header">{title}</h1>
