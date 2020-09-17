@@ -57,11 +57,6 @@
   transition: 0.5s;
 }
 
-.nav-item:hover {
-  /* background-color: rgb(253, 253, 253); */
-  /* border-bottom: 4px solid #c8596b; */
-}
-
 .nav-links {
   /* font-family: 'Barlow Condensed', sans-serif; */
   color: #acacac;
@@ -138,6 +133,7 @@
   }
 
   .menu-icon {
+    /* show navbar menu */
     display: block;
     position: absolute;
     top: 0;

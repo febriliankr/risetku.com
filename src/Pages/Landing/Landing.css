@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 50px 20px 50px;
+  /* margin: 0 50px 20px 50px; */
   padding: 14px;
   color: var(--light-gray-text);
   line-height: 1.5;
@@ -43,6 +43,12 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .landing__text{
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
   .landing__text-header {
     text-align: left;
     font-size: 30px;
@@ -57,9 +63,11 @@
   }
   .landing__buttons{
     text-align: left;
-    margin: auto;
+    min-width: 0px !important;
     display: flex;
     flex-direction: column;
+    
+    
   }
   .landing__ask{
     display: flex;
@@ -73,7 +81,8 @@
 .landing__buttons {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  min-width: 400px;
+  
 }
 
 .landing__ask {
