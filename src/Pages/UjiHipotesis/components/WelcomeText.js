@@ -2,16 +2,33 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../../components/Button/Button";
 
-function WelcomeText({ setMulai, title, description, selesai, answers, outputToPage }) {
-  
+const osdsad = {
+  1: "Satu",
+  2: "Kategorik",
+  3: "Dua kelompok (Dikotom)",
+  4: "Tidak Berpasangan",
+  5: "Dua atau lebih",
+  6: "Numerik",
+  7: "Tidak Normal",
+};
+
+function WelcomeText({
+  setMulai,
+  title,
+  description,
+  selesai,
+  answers,
+  outputToPage,
+}) {
   window.scrollTo(0, 0);
   return (
     <>
       <section className="uji-hipotesis__text">
         {selesai ? (
           <>
-          <h3>{outputToPage}</h3>
-          <p>{JSON.stringify(answers)}</p>
+            <h3>Uji Hipotesis yang cocok untuk penelitian anda adalah</h3>
+            <h1>{outputToPage}</h1>
+            <p>{JSON.stringify(answers)}</p>
           </>
         ) : (
           <>
