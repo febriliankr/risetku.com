@@ -71,7 +71,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "",
+    uji: "One-way ANOVA",
   },
   data7: {
     answer: {
