@@ -1,30 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BesarSampel.css";
-import { Link } from "react-router-dom";
-import { Button } from "../../components/Button/Button";
+import "./subsection.css";
+import WelcomeText from "./components/WelcomeText";
+import Questions from "./components/Questions";
+import dataQuestionsBesarSampel from "./dataQuestionsBesarSampel";
 
-function BesarSampel() {
+function UjiHipotesis() {
+  const [selesai, setSelesai] = useState(false);
+  const [mulai, setMulai] = useState(false);
+  const [answers, setAnswers] = useState({
+    1: "",
+    2: "",
+    3: "",
+  });
+  const [questions, setQuestions] = useState(dataQuestionsBesarSampel);
+
+  useEffect(() => {
+    console.log('answers', answers)
+  }, [answers])
+
   return (
     <>
     <div className="uji-hipotesis__container">
-      <section className="uji-hipotesis__text">
-        <h1 className="uji-hipotesis__text-header">
-          Hitung Besar Sampel
-        </h1>
-        <p className="uji-hipotesis__text-description">
-          Temukan rumus besar sampel yang cocok untuk penelitianmu dan hitung
-          jumlahnya dengan menjawab beberapa pertanyaan berikut!
-        </p>
-
-        <div className="uji-hipotesis__buttons">
-          <Link to="/hitung-besar-sampel/mulai">
-            <Button buttonStyle="btn--evoblue">
-              Mulai Hitung Besar Sampel
-            </Button>
-          </Link>
+      {mulai ? (
+        Object.keys(questions).map((q) => {
+          return (
+            <>
+              <Questions
+                number={questions[q].number}
+                setQuestions={setQuestions}
+                questions={questions}
+                answers={answers}
+                setAnswers={setAnswers}
+                question={questions[q].question}
+                options={questions[q].options}
+              />
+            </>
+          );
+        })
+      ) : (
+        <WelcomeText
+          setMulai={setMulai}
+          selesai={selesai}
+          answers={answers}
+          buttonText="Mulai Hitung Besar Sampel"
+          title="Hitung Besar Sampel"
+          description="Temukan rumus besar sampel yang cocok untuk penelitianmu dan hitung
+          jumlahnya dengan menjawab beberapa pertanyaan berikut!"
+        />
+      )}
+      {mulai ? (
+        <div
+          className="selesai__button"
+          onClick={() => {
+            setSelesai(true);
+            setMulai(false);
+          }}
+        >
+          Selesai
         </div>
-      </section>
-
+      ) : null}
     </div>
     <div className="subsection__container">
         <h2 className="subsection__title">Apa itu besar sampel?</h2>
@@ -45,4 +80,4 @@ function BesarSampel() {
   );
 }
 
-export default BesarSampel;
+export default UjiHipotesis;

@@ -1,0 +1,32 @@
+:root {
+  --gray-text: #a5a5a5;
+  --light-gray-text: #e9e9e9;
+}
+
+
+
+.subsection__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0 auto 20px auto;
+  max-width: 650px;
+  padding: 14px;
+  color: var(--light-gray-text);
+  line-height: 1.5;
+}
+
+.subsection__container {
+  background-color: #272727;
+  padding: 3rem;
+  
+}
+
+.subsection__title{
+  text-align: center;
+  font-size: 40px;
+}

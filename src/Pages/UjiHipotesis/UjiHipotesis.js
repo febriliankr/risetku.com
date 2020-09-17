@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./UjiHipotesis.css";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
@@ -13,6 +13,10 @@ function UjiHipotesis() {
     3: "",
   });
   const [questions, setQuestions] = useState(dataQuestions);
+
+  useEffect(() => {
+    console.log('answers', answers)
+  }, [answers])
 
   return (
     <div className="uji-hipotesis__container">

@@ -3,42 +3,92 @@
   --light-gray-text: #e9e9e9;
 }
 
+.uji-hipotesis__container {
+  background-color: #1b1b1b;
+  padding-top: 150px;
+  background-image: url(https://obsidian.md/images/starfield.svg);
+  min-height: calc(80vh - 100px);
+}
 
-
-.subsection__text {
+.uji-hipotesis__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
-  text-align: left;
-  font-size: 20px;
-  font-weight: 200;
-  margin: 0 auto 20px auto;
-  max-width: 650px;
+  align-items: center;
+  text-align: center;
+  margin: 0 50px 20px 50px;
   padding: 14px;
   color: var(--light-gray-text);
   line-height: 1.5;
 }
 
-.landing__image{
-  margin: 100px 0 300px;
-  max-width: 700px;
+.uji-hipotesis__text-header{
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  max-width: 900px;
+  color: #fff;
+  /* background: -webkit-linear-gradient(45deg, #15a4f7, #17ffd8 80%); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
-@media screen and (max-width: 820px) {
-  .landing__buttons {
-    flex-direction: column;
-    height: 100px;
-  }
+.uji-hipotesis__text-description{
+  font-size: 18px;
+  margin-top: 0;
+  max-width: 900px;
+  font-weight: 300;
 }
 
-.subsection__container {
-  background-color: #272727;
-  padding: 3rem;
+.uji-hipotesis__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 430px;
+}
+
+.uji-hipotesis__ask {
+  margin: 20px 10px 10px;
+  text-decoration: none;
+  color: var(--gray-text);
+  cursor: help;
+  font-size: 14px;
   
 }
 
-.subsection__title{
-  text-align: center;
-  font-size: 40px;
+@media screen and (max-width: 420px) {
+
+  .uji-hipotesis__text {
+    margin: auto;
+  }
 }
+
+.selesai__button {
+  border-radius: 8px;
+  border: 2px solid rgba(172, 172, 172, 0.521);
+  box-shadow: 0px 0px 0px 4px rgba(97, 97, 97, 0.14);
+  background: transparent;
+  color: rgb(238, 238, 238);
+  
+  font-weight: 200;
+  padding: 15px 20px;
+  transition: 0.4s;
+  cursor: pointer;
+  max-width: 150px;
+  
+  text-align: center;
+  font-size: 27px;
+  margin: 30px auto 50px;
+}
+
+.selesai__button:hover {
+  border: 2px solid rgb(47, 163, 240);
+  background: linear-gradient(
+    30deg,
+    rgb(47, 163, 240) 0%,
+    rgb(24, 175, 150) 100%
+  );
+  color: #fff;
+  box-shadow: 0px 0px 0px 4px rgba(38, 161, 218, 0.14);
+}
+
+
