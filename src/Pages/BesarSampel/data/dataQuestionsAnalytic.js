@@ -1,4 +1,4 @@
-const dataQuestionsBesarSampel = {
+const dataQuestionsAnalytic = {
   1: {
     number: 1,
     question: "Berapakah jumlah variabel bebas Anda?",
@@ -38,4 +38,5 @@ const dataQuestionsBesarSampel = {
   
 };
 
-export default dataQuestionsBesarSampel
+
+export default dataQuestionsAnalytic

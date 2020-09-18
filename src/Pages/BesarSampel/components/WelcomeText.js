@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../../../components/Button/Button";
+import Result from "./Result";
 
 function WelcomeText({
   setMulai,
@@ -18,11 +19,12 @@ function WelcomeText({
         {selesai ? (
           <>
             {!(outputToPage.length > 0) ? (
-              <h3>
-              Tidak ditemukan rumus yang sesuai.
-                </h3>
+              <>
+                <Result outputToPage=" Tidak ditemukan rumus yang sesuai. "/>
+              </>
             ) : (
               <>
+                <Result outputToPage={outputToPage} />
                 <h3>
                   Temukan rumus besar sampel yang cocok untuk penelitian anda
                   adalah

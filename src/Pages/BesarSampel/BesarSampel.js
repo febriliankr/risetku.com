@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./BesarSampel.css";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
-import dataQuestionsBesarSampel from "./data/dataQuestionsBesarSampel";
+import dataQuestionsAnalytic from "./data/dataQuestionsAnalytic";
+import dataQuestionsDescriptive from "./data/dataQuestionsDescriptive";
 import dataMatchBesarSampel from "./data/dataMatchBesarSampel";
 import Subsection from "../../components/Subsection/Subsection";
 import subsectionOne from "./data/dataSubsection";
+import AnalitikQuestions from "./components/AnalitikQuestions";
+import QAnalyticOrDescriptive from "./components/QAnalyticOrDescriptive";
+import DescriptiveQuestions from "./components/DescriptiveQuestions";
+import Result from "./components/Result";
 
 function BesarSampel() {
   const [outputToPage, setOutputToPage] = useState("");
@@ -14,8 +19,13 @@ function BesarSampel() {
   const [enableKeduanya3, setEnableKeduanya3] = useState(false);
   const [show34, setShow34] = useState(false);
   const [show7, setShow7] = useState(false);
-  const [questions, setQuestions] = useState(dataQuestionsBesarSampel);
+  const [questions, setQuestions] = useState(dataQuestionsAnalytic);
   const [foundOutput, setFoundOutput] = useState(false);
+  const [analytic, setAnalytic] = useState(false);
+  const [descriptive, setDescriptive] = useState(false);
+  const [questionsDescriptive, setQuestionsDescriptive] = useState(
+    dataQuestionsDescriptive
+  );
 
   const [answers, setAnswers] = useState({
     1: "",
@@ -92,33 +102,37 @@ function BesarSampel() {
   return (
     <>
       <div className="uji-hipotesis__container">
+
+        {!(analytic || descriptive) && mulai ? (
+          <QAnalyticOrDescriptive
+            setAnalytic={setAnalytic}
+            setDescriptive={setDescriptive}
+          />
+        ) : null}
+
+        {descriptive && mulai ? (
+          <DescriptiveQuestions
+            questionsDescriptive={questionsDescriptive}
+            setQuestionsDescriptive={setQuestionsDescriptive}
+          />
+        ) : null}
+
+        {analytic && mulai ? (
+          <AnalitikQuestions
+            questions={questions}
+            show34={show34}
+            show7={show7}
+            enableKeduanya3={enableKeduanya3}
+            setQuestions={setQuestions}
+            answers={answers}
+            setAnswers={setAnswers}
+          />
+        ) : null}
+
         {mulai ? (
-          Object.keys(questions).map((q) => {
-            if (
-              !show34 &&
-              (questions[q].number === 3 || questions[q].number === 4)
-            ) {
-              return null;
-            }
-            if (!show7 && questions[q].number === 7) {
-              return null;
-            }
-            return (
-              <>
-                <Questions
-                  enableKeduanya3={enableKeduanya3}
-                  number={questions[q].number}
-                  setQuestions={setQuestions}
-                  questions={questions}
-                  answers={answers}
-                  setAnswers={setAnswers}
-                  question={questions[q].question}
-                  options={questions[q].options}
-                />
-              </>
-            );
-          })
+          <></>
         ) : (
+          <>
           <WelcomeText
             foundOutput={foundOutput}
             outputToPage={outputToPage}
@@ -127,11 +141,14 @@ function BesarSampel() {
             answers={answers}
             buttonText="Mulai Hitung Besar Sampel"
             title="Hitung Besar Sampel"
-            description="Temukan rumus besar sampel yang cocok untuk penelitianmu dan hitung
+            description="Rumus besar sampel yang cocok untuk penelitianmu dan hitung
           jumlahnya dengan menjawab beberapa pertanyaan berikut!"
           />
+          </>
         )}
+
         {mulai ? (
+          <>
           <div
             className="selesai__button"
             onClick={() => {
@@ -142,12 +159,10 @@ function BesarSampel() {
           >
             Selesai
           </div>
+          </>
         ) : null}
       </div>
-      <Subsection
-        title={subsectionOne.title}
-        text={subsectionOne.text}
-      />
+      <Subsection title={subsectionOne.title} text={subsectionOne.text} />
     </>
   );
 }
