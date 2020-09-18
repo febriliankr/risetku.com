@@ -77,6 +77,10 @@ function BesarSampel() {
 
       return null;
     });
+
+    if (answers[5]==="Dua atau lebih"){
+      setOutputToPage('Tidak ditemukan rumus yang sesuai.');
+    }
   }
 
   return (
