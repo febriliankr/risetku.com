@@ -15,6 +15,7 @@ function BesarSampel() {
   const [show34, setShow34] = useState(false);
   const [show7, setShow7] = useState(false);
   const [questions, setQuestions] = useState(dataQuestionsBesarSampel);
+  const [foundOutput, setFoundOutput] = useState(false);
 
   const [answers, setAnswers] = useState({
     1: "",
@@ -61,16 +62,18 @@ function BesarSampel() {
         3: "",
       });
     }
-    determineUjiHipotesis();
+    determineBesarSampel();
   };
 
-  function determineUjiHipotesis() {
+  function determineBesarSampel() {
     console.log("MENENTUKAN: ", answers);
     Object.keys(dataMatchBesarSampel).map((match) => {
       if (
         JSON.stringify(dataMatchBesarSampel[match].answer) === JSON.stringify(answers)
       ) {
+        
         setOutputToPage(JSON.stringify(dataMatchBesarSampel[match].rumus));
+        setFoundOutput(true);
       } else {
         console.log("dataMatchBesarSampel[match].rumus", dataMatchBesarSampel[match]);
       }
@@ -114,6 +117,7 @@ function BesarSampel() {
         })
       ) : (
         <WelcomeText
+          foundOutput={foundOutput}
           outputToPage={outputToPage}
           setMulai={setMulai}
           selesai={selesai}

@@ -8,7 +8,8 @@ function WelcomeText({
   selesai,
   answers,
   outputToPage,
-  buttonText
+  buttonText,
+  foundOutput,
 }) {
   window.scrollTo(0, 0);
   return (
@@ -16,9 +17,20 @@ function WelcomeText({
       <section className="uji-hipotesis__text">
         {selesai ? (
           <>
-            <h3>Uji Hipotesis yang cocok untuk penelitian anda adalah</h3>
-            <h1>{outputToPage}</h1>
-            <p>{JSON.stringify(answers)}</p>
+            {!(outputToPage.length > 0) ? (
+              <h3>
+              Tidak ditemukan rumus yang sesuai.
+                </h3>
+            ) : (
+              <>
+                <h3>
+                  Temukan rumus besar sampel yang cocok untuk penelitian anda
+                  adalah
+                </h3>
+                <h1>{outputToPage}</h1>
+                <p>{JSON.stringify(answers)}</p>
+              </>
+            )}
           </>
         ) : (
           <>
@@ -37,4 +49,3 @@ function WelcomeText({
 }
 
 export default WelcomeText;
-

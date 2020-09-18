@@ -75,9 +75,10 @@ function UjiHipotesis() {
         // console.log(JSON.stringify(dataMatchAll[match].answer));
         // console.log(JSON.stringify(answers));
       }
-
       return null;
     });
+
+    if(outputToPage.length===0){setOutputToPage("Tidak ditemukan uji hipotesis yang sesuai.")}
   }
 
   return (
