@@ -11,17 +11,16 @@ function Result({ outputToPage }) {
   return (
     <>
     
-      {cleanOutput === 0 ? (
+      {cleanOutput === "Tidak ditemukan rumus yang sesuai." ? (
         <>
-          <h1>{cleanOutput}</h1>
-          <p>tidak ditemukan :[</p>
+          <h1>{cleanOutput} 😭</h1>
         </>
       ) : (
         <>
         <div className="questions">
           <h2
             style={{color: '#e9e9e9'}}
-          >Berikut adalah rumus besar sampel minimal yang sesuai dengan penelitian Anda</h2>
+          >Berikut adalah rumus besar sampel minimal yang sesuai dengan penelitian Anda ({cleanOutput})</h2>
           <img
             style={{
               maxWidth: "100%",

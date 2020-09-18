@@ -94,7 +94,7 @@ function BesarSampel() {
     });
 
     if (answers[5] === "Dua atau lebih") {
-      setOutputToPage("Tidak ditemukan rumus yang sesuai.");
+      setOutputToPage(" Tidak ditemukan rumus yang sesuai. ");
     }
   }
 
