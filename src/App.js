@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import BesarSampel from "./Pages/BesarSampel/BesarSampel";
+import FaQ from "./Pages/FaQ/FaQ";
 import Konsultasi from "./Pages/Konsultasi/Konsultasi";
 import Landing from "./Pages/Landing/Landing";
 import UjiHipotesis from "./Pages/UjiHipotesis/UjiHipotesis";
@@ -17,7 +18,7 @@ function App() {
           <Route path="/uji-hipotesis" component={UjiHipotesis}/>
           <Route path="/hitung-besar-sampel" component={BesarSampel}/>
           <Route path="/konsultasi" component={Konsultasi}/>
-          <Route path="/perpustakaan" component={Konsultasi}/>
+          <Route path="/faq" component={FaQ}/>
         </Switch>
         <Footer/>
       </BrowserRouter>

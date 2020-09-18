@@ -24,11 +24,21 @@ function Navbar() {
             Hitung Besar Sampel
             </Link>
           </li>
+
+          <li className="nav-item">
+            <Link to="/Konsultasi" className="nav-links">
+              FAQ
+            </Link>
+          </li>
+
           <li className="nav-item">
             <Link to="/Konsultasi" className="nav-links">
               Konsultasi
             </Link>
           </li>
+
+
+
         </ul>
       </div>
     </div>
