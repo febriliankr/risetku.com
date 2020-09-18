@@ -56,7 +56,9 @@
 }
 
 @media screen and (max-width: 420px) {
-
+  .uji-hipotesis__container {
+    padding-top: 50px;
+  }
   .uji-hipotesis__text {
     margin: auto;
   }

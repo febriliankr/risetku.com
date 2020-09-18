@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./BesarSampel.css";
 import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
-import dataQuestionsBesarSampel from "./dataQuestionsBesarSampel";
-import dataMatchBesarSampel from "./dataMatchBesarSampel";
-import "./subsection.css";
+import dataQuestionsBesarSampel from "./data/dataQuestionsBesarSampel";
+import dataMatchBesarSampel from "./data/dataMatchBesarSampel";
+import Subsection from "../../components/Subsection/Subsection";
+
 
 
 function BesarSampel() {
@@ -141,21 +142,12 @@ function BesarSampel() {
         </div>
       ) : null}
     </div>
-    <div className="subsection__container">
-        <h2 className="subsection__title">Apa itu besar sampel?</h2>
-        <p className="subsection__text">
-          Dalam memulai suatu penelitian, peneliti tentu perlu menentukan sampel
-          penelitiannya. Salah satu hal yang paling penting untuk ditentukan
+    <Subsection title="TheSubsc"
+      text="Dalam memulai suatu penelitian, peneliti tentu perlu menentukan sampel
+          penelitiannya.ewe Salah satu hal yang paling penting untuk ditentukan
           adalah besar sampel minimal dalam penelitian agar suatu penelitian
-          dikatakan memiliki hasil yang valid.
-        </p>
-        <p className="subsection__text">
-          Besar sampel minimal ini dapat ditentukan dengan berbagai rumus.
-          Masing-masing penelitian memiliki rumus besar sampel. Peneliti perlu
-          mengetahui rumus besar sampel yang sesuai untuk mencapai penelitian
-          yang optimal.
-        </p>
-      </div>
+          dikatakan memiliki hasil yang valid."
+    />
     </>
   );
 }

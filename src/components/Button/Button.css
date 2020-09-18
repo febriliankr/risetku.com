@@ -80,5 +80,5 @@
   border: 1.5px solid rgb(47, 163, 240);
   background: linear-gradient(30deg, rgb(47, 163, 240) 0%, rgb(24, 175, 150) 100%);
   color: #fff;
-  box-shadow: 0px 0px 12px 0px rgba(38, 161, 218, 0.4);
+  box-shadow: 0px 0px 0px 4px rgba(38, 161, 218, 0.14);
 }

@@ -28,3 +28,16 @@
   text-align: center;
   font-size: 40px;
 }
+
+@media screen and (max-width: 800px) {
+  .subsection__container {
+    padding: 20px 10px;
+  }
+  .subsection__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .subsection__title{
+    font-size: 22px;
+  }
+}
