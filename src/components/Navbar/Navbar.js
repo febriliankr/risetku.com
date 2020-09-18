@@ -18,15 +18,13 @@ function Navbar() {
               Uji Hipotesis
             </Link>
           </li>
-
           <li className="nav-item">
             <Link to="/hitung-besar-sampel" className="nav-links">
             Hitung Besar Sampel
             </Link>
           </li>
-
           <li className="nav-item">
-            <Link to="/Konsultasi" className="nav-links">
+            <Link to="/faq" className="nav-links">
               FAQ
             </Link>
           </li>
@@ -36,9 +34,6 @@ function Navbar() {
               Konsultasi
             </Link>
           </li>
-
-
-
         </ul>
       </div>
     </div>

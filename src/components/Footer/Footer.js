@@ -8,8 +8,10 @@ function Footer() {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>Contact Us</h2>
-            <Link to="/">WA: 0852 8181 2202</Link>
+            <Link to="/"><h2>Konsultasi</h2></Link>
+          </div>
+          <div className="footer-link-items">
+            <Link to="/"><h2>FAQ</h2></Link>
           </div>
         </div>
       </div>

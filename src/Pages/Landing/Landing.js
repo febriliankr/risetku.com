@@ -35,6 +35,13 @@ function Landing() {
           className="landing__image"
         />
       </section>
+      <section className="landing__text">
+      <h1>Tentang Risetku.com</h1>
+        <p className="landing__text-description">
+          Risetku.com didirikan oleh Elvan Wiyarta (FKUI'17) dan Febrilian
+          Kristiawan (FKUI'17) dengan tujuan membuat proses analisis penelitian lebih mudah.
+        </p>
+      </section>
     </div>
   );
 }
