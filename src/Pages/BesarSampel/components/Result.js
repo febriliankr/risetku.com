@@ -5,17 +5,19 @@ function Result({ outputToPage }) {
 
   return (
     <div className="questions">
-      {outputToPage===0 ? (<p>tidak ditemukan :[</p>) : (
+      {cleanOutput > 5 ? (
+        <p>tidak ditemukan :[</p>
+      ) : (
         <>
-        <h1>{cleanOutput}</h1>
-      <img
-        style={{
-          maxWidth: "100%",
-        }}
-        src={`images/rumus/rumus${cleanOutput}.jpg`}
-        alt="rumus"
-      />
-      </>
+          <h1>{cleanOutput}</h1>
+          <img
+            style={{
+              maxWidth: "100%",
+            }}
+            src={`images/rumus/rumus${cleanOutput}.jpg`}
+            alt="rumus"
+          />
+        </>
       )}
     </div>
   );
