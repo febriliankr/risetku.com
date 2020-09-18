@@ -11,9 +11,8 @@ function Questions({
   questions,
   answers,
   setAnswers,
-  enableKeduanya3
+  enableKeduanya3,
 }) {
-
   const handleClick = (option, number) => {
     console.log("option: ", option);
     console.log("number: ", number);
@@ -44,30 +43,32 @@ function Questions({
         </div>
         <div className="questions__options">
           {options.map((option) => {
-            const enableKeduanya = ((!enableKeduanya3) && (option === "Keduanya")) ;
-            console.log('enableKeduanya', enableKeduanya);
+            const enableKeduanya = !enableKeduanya3 && option === "Keduanya";
+            console.log("enableKeduanya", enableKeduanya);
             return (
-              <div className="questions__options">
-
-                <div
-                  className={`${
-                    answers[number] === option
-                      ? `active-question questions__button`
-                      : `questions__button`
-                  } ${enableKeduanya ? `questions__button-hidden` : null}`}
-                  onClick={() => handleClick(option, number)}
-                >
-                  {option}
+              <>
+                <div className="questions__options">
+                  <div
+                    className={`${
+                      answers[number] === option
+                        ? `active-question questions__button`
+                        : `questions__button`
+                    } ${enableKeduanya ? `questions__button-hidden` : null}`}
+                    onClick={() => handleClick(option, number)}
+                  >
+                    {option}
+                  </div>
                 </div>
-
-              </div>
+              </>
             );
           })}
+          
         </div>
         <div className="questions__ask">
           <Link
             data-tip="Pelajari lebih lanjut"
             className="questions__question"
+            to="/faq"
           >
             Apa ini?
           </Link>

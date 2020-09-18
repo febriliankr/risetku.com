@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../../components/Button/Button";
 
 function Landing() {
+  window.scrollTo(0, 0);
   return (
     <div className="landing__container">
       <section className="landing__text">

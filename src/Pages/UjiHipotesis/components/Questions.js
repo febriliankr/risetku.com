@@ -84,6 +84,7 @@ function Questions({
           <Link
             data-tip="Pelajari lebih lanjut"
             className="questions__question"
+            to="/faq"
           >
             Apa ini?
           </Link>
