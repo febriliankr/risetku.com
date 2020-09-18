@@ -13,17 +13,17 @@ const dataQuestionsBesarSampel = {
   3: {
     number: 3,
     question: "Apakah variabel bebas Anda terdiri dari dua kelompok atau lebih dari dua kelompok?",
-    options: ["Dua kelompok", "Lebih dari dua kelompok"],
+    options: ["Dua kelompok (Dikotom)", "Lebih dari dua kelompok (Polikotom)"],
   },
   4: {
     number: 4,
     question: "Apakah variabel bebas Anda berpasangan atau tidak berpasangan?",
-    options: ["Berpasangan", "Tidak berpasangan"],
+    options: ["Berpasangan", "Tidak Berpasangan"],
   },
   5: {
     number: 5,
     question: "Berapakah jumlah variabel terikat Anda?",
-    options: ["Satu"],
+    options: ["Satu", "Dua atau lebih"],
   },
   6: {
     number: 6,
