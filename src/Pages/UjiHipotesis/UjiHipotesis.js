@@ -6,13 +6,15 @@ import dataQuestions from "./dataQuestions";
 import dataMatchAll from "./dataMatchAll";
 
 function UjiHipotesis() {
-  const [outputToPage, setOutputToPage] = useState("");
+  let outputToPage = "";
   const [selesai, setSelesai] = useState(false);
   const [mulai, setMulai] = useState(false);
   const [enableKeduanya3, setEnableKeduanya3] = useState(false);
   const [show34, setShow34] = useState(false);
   const [show7, setShow7] = useState(false);
   const [questions, setQuestions] = useState(dataQuestions);
+  const [ultimateAnswer, setUltimateAnswer] = useState(false);
+  const [theAnswerToEverything, setTheAnswerToEverything] = useState("");
 
   const [answers, setAnswers] = useState({
     1: "",
@@ -53,7 +55,7 @@ function UjiHipotesis() {
         7: "",
       });
     }
-    if ((answers[1] === "Satu")&&(answers[3] === "Keduanya")) {
+    if (answers[1] === "Satu" && answers[3] === "Keduanya") {
       setAnswers({
         ...answers,
         3: "",
@@ -69,7 +71,8 @@ function UjiHipotesis() {
       if (
         JSON.stringify(dataMatchAll[match].answer) === JSON.stringify(answers)
       ) {
-        setOutputToPage(JSON.stringify(dataMatchAll[match].uji));
+        setTheAnswerToEverything(JSON.stringify(dataMatchAll[match].uji));
+        setUltimateAnswer(true);
       } else {
         console.log("dataMatchAll[match].uji", dataMatchAll[match].uji);
         // console.log(JSON.stringify(dataMatchAll[match].answer));
@@ -78,11 +81,33 @@ function UjiHipotesis() {
       return null;
     });
 
-    if(outputToPage.length===0){setOutputToPage("Tidak ditemukan uji hipotesis yang sesuai.")}
+    if (outputToPage.length === 0) {
+      outputToPage = "Tidak ditemukan uji hipotesis yang sesuai.";
+    }
   }
 
   return (
     <div className="uji-hipotesis__container">
+      {ultimateAnswer ? (
+        <div
+          className="questions"
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <p>Uji hipotesis yang cocok untuk penelitian Anda adalah</p>
+          <h1>{theAnswerToEverything}</h1>
+        </div>
+      ) : selesai ? (
+        <div
+          className="questions"
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <h2>Tidak ada uji hipotesis yang cocok untuk penelitian Anda.</h2>
+        </div>
+      ) : null}
       {mulai ? (
         Object.keys(questions).map((q) => {
           if (

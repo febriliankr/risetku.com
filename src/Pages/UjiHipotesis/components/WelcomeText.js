@@ -14,22 +14,7 @@ function WelcomeText({
   return (
     <>
       <section className="uji-hipotesis__text">
-        {selesai ? (
-          <>
-            {outputToPage === "Tidak ditemukan uji hipotesis yang sesuai." ? (
-              <div className="questions">
-                <h1>{outputToPage}</h1>
-                {/* <p>{JSON.stringify(answers)}</p> */}
-              </div>
-            ) : (
-              <div className="questions">
-                <p>Uji Hipotesis yang sesuai untuk penelitian anda adalah</p>
-                <h1>{outputToPage}</h1>
-                {/* <p>{JSON.stringify(answers)}</p> */}
-              </div>
-            )}
-          </>
-        ) : (
+        {selesai ? (null) : (
           <>
             <h1 className="uji-hipotesis__text-header">{title}</h1>
             <p className="uji-hipotesis__text-description">{description}</p>
