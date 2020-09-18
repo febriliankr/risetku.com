@@ -5,8 +5,7 @@ import Questions from "./components/Questions";
 import dataQuestionsBesarSampel from "./data/dataQuestionsBesarSampel";
 import dataMatchBesarSampel from "./data/dataMatchBesarSampel";
 import Subsection from "../../components/Subsection/Subsection";
-
-
+import subsectionOne from "./data/dataSubsection";
 
 function BesarSampel() {
   const [outputToPage, setOutputToPage] = useState("");
@@ -57,7 +56,7 @@ function BesarSampel() {
         7: "",
       });
     }
-    if ((answers[1] === "Satu")&&(answers[3] === "Keduanya")) {
+    if (answers[1] === "Satu" && answers[3] === "Keduanya") {
       setAnswers({
         ...answers,
         3: "",
@@ -70,84 +69,85 @@ function BesarSampel() {
     console.log("MENENTUKAN: ", answers);
     Object.keys(dataMatchBesarSampel).map((match) => {
       if (
-        JSON.stringify(dataMatchBesarSampel[match].answer) === JSON.stringify(answers)
+        JSON.stringify(dataMatchBesarSampel[match].answer) ===
+        JSON.stringify(answers)
       ) {
-        
         setOutputToPage(JSON.stringify(dataMatchBesarSampel[match].rumus));
         setFoundOutput(true);
       } else {
-        console.log("dataMatchBesarSampel[match].rumus", dataMatchBesarSampel[match]);
+        console.log(
+          "dataMatchBesarSampel[match].rumus",
+          dataMatchBesarSampel[match]
+        );
       }
 
       return null;
     });
 
-    if (answers[5]==="Dua atau lebih"){
-      setOutputToPage('Tidak ditemukan rumus yang sesuai.');
+    if (answers[5] === "Dua atau lebih") {
+      setOutputToPage("Tidak ditemukan rumus yang sesuai.");
     }
   }
 
   return (
     <>
-    <div className="uji-hipotesis__container">
-      {mulai ? (
-        Object.keys(questions).map((q) => {
-          if (
-            !show34 &&
-            (questions[q].number === 3 || questions[q].number === 4)
-          ) {
-            return null;
-          }
-          if (!show7 && questions[q].number === 7) {
-            return null;
-          }
-          return (
-            <>
-              <Questions
-                enableKeduanya3={enableKeduanya3}
-                number={questions[q].number}
-                setQuestions={setQuestions}
-                questions={questions}
-                answers={answers}
-                setAnswers={setAnswers}
-                question={questions[q].question}
-                options={questions[q].options}
-              />
-            </>
-          );
-        })
-      ) : (
-        <WelcomeText
-          foundOutput={foundOutput}
-          outputToPage={outputToPage}
-          setMulai={setMulai}
-          selesai={selesai}
-          answers={answers}
-          buttonText="Mulai Hitung Besar Sampel"
+      <div className="uji-hipotesis__container">
+        {mulai ? (
+          Object.keys(questions).map((q) => {
+            if (
+              !show34 &&
+              (questions[q].number === 3 || questions[q].number === 4)
+            ) {
+              return null;
+            }
+            if (!show7 && questions[q].number === 7) {
+              return null;
+            }
+            return (
+              <>
+                <Questions
+                  enableKeduanya3={enableKeduanya3}
+                  number={questions[q].number}
+                  setQuestions={setQuestions}
+                  questions={questions}
+                  answers={answers}
+                  setAnswers={setAnswers}
+                  question={questions[q].question}
+                  options={questions[q].options}
+                />
+              </>
+            );
+          })
+        ) : (
+          <WelcomeText
+            foundOutput={foundOutput}
+            outputToPage={outputToPage}
+            setMulai={setMulai}
+            selesai={selesai}
+            answers={answers}
+            buttonText="Mulai Hitung Besar Sampel"
             title="Hitung Besar Sampel"
             description="Temukan rumus besar sampel yang cocok untuk penelitianmu dan hitung
           jumlahnya dengan menjawab beberapa pertanyaan berikut!"
-        />
-      )}
-      {mulai ? (
-        <div
-          className="selesai__button"
-          onClick={() => {
-            setSelesai(true);
-            setMulai(false);
-            selesaiCleanup();
-          }}
-        >
-          Selesai
-        </div>
-      ) : null}
-    </div>
-    <Subsection title="TheSubsc"
-      text="Dalam memulai suatu penelitian, peneliti tentu perlu menentukan sampel
-          penelitiannya.ewe Salah satu hal yang paling penting untuk ditentukan
-          adalah besar sampel minimal dalam penelitian agar suatu penelitian
-          dikatakan memiliki hasil yang valid."
-    />
+          />
+        )}
+        {mulai ? (
+          <div
+            className="selesai__button"
+            onClick={() => {
+              setSelesai(true);
+              setMulai(false);
+              selesaiCleanup();
+            }}
+          >
+            Selesai
+          </div>
+        ) : null}
+      </div>
+      <Subsection
+        title={subsectionOne.title}
+        text={subsectionOne.text}
+      />
     </>
   );
 }

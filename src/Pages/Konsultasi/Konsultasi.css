@@ -30,8 +30,9 @@
 
 .konsultasi__subsection-container {
   background-color: rgba(39, 39, 39, 0.212);
-  padding: 3rem;
+  padding: 1rem 3rem 1rem;
   border-radius: 7px;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 800px) {
