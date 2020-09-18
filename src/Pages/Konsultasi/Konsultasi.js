@@ -1,22 +1,22 @@
 import React from "react";
+import './Konsultasi.css'
 
 function Konsultasi() {
   return (
-    <div>
-      <div className="konsultasi__subsection-container">
-        <h2 className="konsultasi__subsection-title">Apa itu besar sampel?</h2>
-        <p className="konsultasi__subsection-text">
-          Dalam memulai suatu penelitian, peneliti tentu perlu menentukan sampel
-          penelitiannya. Salah satu hal yang paling penting untuk ditentukan
-          adalah besar sampel minimal dalam penelitian agar suatu penelitian
-          dikatakan memiliki hasil yang valid.
-        </p>
-        <p className="konsultasi__subsection-text">
-          Besar sampel minimal ini dapat ditentukan dengan berbagai rumus.
-          Masing-masing penelitian memiliki rumus besar sampel. Peneliti perlu
-          mengetahui rumus besar sampel yang sesuai untuk mencapai penelitian
-          yang optimal.
-        </p>
+    <div className="konsultasi__container">
+      <div className="konsultasi__text">
+        <div className="konsultasi__subsection-container">
+          <h2 className="konsultasi__text-header">Konsultasi</h2>
+          <p className="konsultasi__subsection-text">
+            Risetku menyediakan ruang bagi peneliti yang ingin berkonsultasi
+            dengan konsultan penelitian yang ahli di bidangnya dengan biaya yang
+            sangat terjangkau. Untuk saat ini kami masih mengembangkan bagian
+            ini.
+          </p>
+          <p className="konsultasi__subsection-text">
+            Seluruh pertanyaan Anda bisa dikirimkan ke email: risetku@gmail.com
+          </p>
+        </div>
       </div>
     </div>
   );

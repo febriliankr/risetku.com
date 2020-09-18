@@ -3,6 +3,13 @@
   --light-gray-text: #e9e9e9;
 }
 
+.konsultasi__container {
+  background-color: #1b1b1b;
+  padding-top: 0;
+  background-image: url(https://obsidian.md/images/starfield.svg);
+  
+}
+
 .konsultasi__subsection-title {
   text-align: center;
   font-size: 40px;
@@ -16,14 +23,44 @@
   text-align: left;
   font-size: 20px;
   font-weight: 200;
-  margin: 0 auto 20px auto;
-  max-width: 650px;
-  padding: 14px;
+  max-width: 700px;
   color: var(--light-gray-text);
   line-height: 1.5;
 }
 
 .konsultasi__subsection-container {
-  background-color: #272727;
+  background-color: rgba(39, 39, 39, 0.212);
   padding: 3rem;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 800px) {
+  .konsultasi__subsection-container {
+    background-color: transparent;
+    padding: 10px 15px 10px 20px;
+  }
+  .konsultasi__subsection-text {
+    font-size: 19px;
+  }
+}
+
+.konsultasi__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: var(--light-gray-text);
+  line-height: 1.5;
+}
+
+.konsultasi__text-header {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  max-width: 900px;
+  /* background: #fff; */
+  /* background: -webkit-linear-gradient(45deg, #15a4f7, #17ffd8 80%); */
+  /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }

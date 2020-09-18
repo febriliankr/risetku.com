@@ -7,7 +7,7 @@
   background-color: #1b1b1b;
   padding-top: 4rem;
   background-image: url(https://obsidian.md/images/starfield.svg);
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .landing__text {
@@ -22,7 +22,7 @@
   line-height: 1.5;
 }
 
-.landing__text-header{
+.landing__text-header {
   font-size: 50px;
   margin-bottom: 10px;
   font-weight: 800;
@@ -33,9 +33,7 @@
   -webkit-text-fill-color: transparent; */
 }
 
-
-
-.landing__text-description{
+.landing__text-description {
   font-size: 22px;
   margin-top: 0;
   max-width: 650px;
@@ -44,7 +42,11 @@
 
 @media screen and (max-width: 600px) {
 
-  .landing__text{
+  .landing__container {
+    padding-top: 1rem;
+  }
+
+  .landing__text {
     align-items: flex-start !important;
     text-align: left !important;
   }
@@ -53,28 +55,29 @@
     text-align: left;
     font-size: 30px;
   }
-  .landing__text-description{
+  .landing__text-description {
     font-size: 18px;
     text-align: left;
-    
   }
-  .landing__text{
+  .landing__text {
     margin-left: 5px;
   }
-  .landing__buttons{
+  .landing__buttons {
     text-align: left;
     min-width: 0px !important;
     display: flex;
     flex-direction: column;
-    
-    
   }
-  .landing__ask{
+
+  .landing__buttons-individual {
+    margin-bottom: 15px;
+  }
+
+  .landing__ask {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin: 0 0px;
-    
+    margin: 0 0px !important;
   }
 }
 
@@ -82,7 +85,6 @@
   display: flex;
   justify-content: space-between;
   min-width: 400px;
-  
 }
 
 .landing__ask {
@@ -91,13 +93,9 @@
   color: var(--gray-text);
   cursor: pointer;
   font-size: 16px;
-  
 }
 
-.landing__image{
-  margin: -22px 0 300px;
+.landing__image {
+  margin: 0px 0 300px;
   max-width: 1000px;
 }
-
-
-
