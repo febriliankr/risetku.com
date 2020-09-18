@@ -25,12 +25,12 @@ function WelcomeText({
             ) : (
               <>
                 <Result outputToPage={outputToPage} />
-                <h3>
+                {/* <h3>
                   Temukan rumus besar sampel yang cocok untuk penelitian anda
                   adalah
                 </h3>
                 <h1>{outputToPage}</h1>
-                <p>{JSON.stringify(answers)}</p>
+                <p>{JSON.stringify(answers)}</p> */}
               </>
             )}
           </>

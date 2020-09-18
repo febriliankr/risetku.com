@@ -82,3 +82,14 @@
   );
   /* color: rgb(255, 0, 0); */
 }
+
+.questions-left {
+  text-align: left;
+  border-radius: 10px;
+  border: 2px solid rgb(32, 32, 32);
+  background-color:  rgba(26, 26, 26, 0.596);
+  width: 800px;
+  min-height: 230px;
+  margin: 0 auto 50px;
+  padding: 10px 40px;
+}
