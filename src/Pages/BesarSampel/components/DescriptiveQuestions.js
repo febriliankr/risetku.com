@@ -11,7 +11,7 @@ function DescriptiveQuestions({
     <div className="questions">
       {kategorikDescriptive ? (
         <>
-          <h1>{cleanOutput}</h1>
+          <h1>Rumus Besar Sampel</h1>
           <img
             style={{
               maxWidth: "100%",
@@ -24,7 +24,7 @@ function DescriptiveQuestions({
 
       {numerikDescriptive ? (
         <>
-          <h1>{cleanOutput}</h1>
+        <h1>Rumus Besar Sampel</h1>
           <img
             style={{
               maxWidth: "100%",
