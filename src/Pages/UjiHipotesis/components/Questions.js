@@ -38,14 +38,6 @@ function Questions({
     <>
       <div className="questions">
         <ReactTooltip />
-        <p
-          style={{
-            color: "grey",
-            marginBottom: 0,
-          }}
-        >
-          Pertanyaan ke-{number}
-        </p>
         <div className="questions__head">
           <h2 className="questions__title">{question}</h2>
         </div>
