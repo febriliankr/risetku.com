@@ -33,7 +33,7 @@ const dataQuestionsBesarSampel = {
   7: {
     number: 7,
     question: "Apakah variabel terikat Anda terdiri dari 2 kelompok atau lebih dari 2 kelompok?",
-    options: ["Dua kelompok", "Lebih dari dua kelompok"],
+    options: ["Dua kelompok (Dikotom)", "Lebih dari dua kelompok (Polikotom)"],
   },
   
 };
