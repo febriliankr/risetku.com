@@ -5,8 +5,11 @@ function Result({ outputToPage }) {
 
   return (
     <div className="questions">
-      {cleanOutput > 5 ? (
+      {cleanOutput === 0 ? (
+        <>
+        <h1>{cleanOutput}</h1>
         <p>tidak ditemukan :[</p>
+        </>
       ) : (
         <>
           <h1>{cleanOutput}</h1>
