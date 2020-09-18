@@ -4,6 +4,8 @@ import WelcomeText from "./components/WelcomeText";
 import Questions from "./components/Questions";
 import dataQuestions from "./dataQuestions";
 import dataMatchAll from "./dataMatchAll";
+import Subsection from "../../components/Subsection/Subsection";
+import subsectionUjiHipotesisOne from './data/subsectionUjiHipotesisOne'
 
 function UjiHipotesis() {
   let outputToPage = "";
@@ -169,6 +171,9 @@ function UjiHipotesis() {
           Selesai
         </div>
       ) : null}
+
+      <Subsection title={subsectionUjiHipotesisOne.title} text={subsectionUjiHipotesisOne.text} />
+
     </div>
   );
 }
