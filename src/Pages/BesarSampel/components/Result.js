@@ -7,7 +7,6 @@ function Result({ outputToPage }) {
     <div className="questions">
       {outputToPage===0 ? (<p>tidak ditemukan :[</p>) : (
         <>
-        <h1>{outputToPage}</h1>
         <h1>{cleanOutput}</h1>
       <img
         style={{

@@ -11,6 +11,7 @@ import QAnalyticOrDescriptive from "./components/QAnalyticOrDescriptive";
 import DescriptiveQuestions from "./components/DescriptiveQuestions";
 
 function BesarSampel() {
+  window.scrollTo(0, 0);
   const [outputToPage, setOutputToPage] = useState("");
   const [selesai, setSelesai] = useState(false);
   const [mulai, setMulai] = useState(false);

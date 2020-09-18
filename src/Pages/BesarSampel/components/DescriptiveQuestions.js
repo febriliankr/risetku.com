@@ -9,9 +9,31 @@ function DescriptiveQuestions({
 
   return (
     <div className="questions">
-      {kategorikDescriptive ? <p>KATEGORIK! EDIT JADI RUMUS KATEGORIK</p> : null}
+      {kategorikDescriptive ? (
+        <>
+          <h1>{cleanOutput}</h1>
+          <img
+            style={{
+              maxWidth: "100%",
+            }}
+            src={`images/rumus/rumus1.jpg`}
+            alt="rumus"
+          />
+        </>
+      ) : null}
 
-      {numerikDescriptive ? <p>Numerik!!! tunjukin rumus numerik</p> : null}
+      {numerikDescriptive ? (
+        <>
+          <h1>{cleanOutput}</h1>
+          <img
+            style={{
+              maxWidth: "100%",
+            }}
+            src={`images/rumus/rumus2.jpg`}
+            alt="rumus"
+          />
+        </>
+      ) : null}
 
       {numerikDescriptive || kategorikDescriptive ? null : (
         <>
@@ -39,7 +61,6 @@ function DescriptiveQuestions({
               </div>
               <div
                 onClick={() => setKategorikDescriptive(true)}
-
                 className="questions__button"
               >
                 Kategorik
