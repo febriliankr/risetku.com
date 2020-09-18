@@ -13,7 +13,8 @@ function Result({ outputToPage }) {
     
       {cleanOutput === "Tidak ditemukan rumus yang sesuai." ? (
         <>
-          <h1>{cleanOutput} 😭</h1>
+          <h1>{cleanOutput}</h1>
+          <span role="img" aria-label="sheep">😭</span>
         </>
       ) : (
         <>
