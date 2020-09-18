@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Questions from "./Questions";
 
 function DescriptiveQuestions({
   questionsDescriptive,

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./BesarSampel.css";
 import WelcomeText from "./components/WelcomeText";
-import Questions from "./components/Questions";
 import dataQuestionsAnalytic from "./data/dataQuestionsAnalytic";
 import dataQuestionsDescriptive from "./data/dataQuestionsDescriptive";
 import dataMatchBesarSampel from "./data/dataMatchBesarSampel";
@@ -10,7 +9,6 @@ import subsectionOne from "./data/dataSubsection";
 import AnalitikQuestions from "./components/AnalitikQuestions";
 import QAnalyticOrDescriptive from "./components/QAnalyticOrDescriptive";
 import DescriptiveQuestions from "./components/DescriptiveQuestions";
-import Result from "./components/Result";
 
 function BesarSampel() {
   const [outputToPage, setOutputToPage] = useState("");
