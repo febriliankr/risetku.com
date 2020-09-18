@@ -19,7 +19,9 @@ function Result({ outputToPage }) {
       ) : (
         <>
         <div className="questions">
-          <h1>{cleanOutput}</h1>
+          <h2
+            style={{color: '#e9e9e9'}}
+          >Berikut adalah rumus besar sampel minimal yang sesuai dengan penelitian Anda</h2>
           <img
             style={{
               maxWidth: "100%",
