@@ -16,7 +16,7 @@ function QAnalyticOrDescriptive({ setAnalytic, setDescriptive }) {
       </p>
       <div className="questions__head">
         <h2 className="questions__title">
-          Apakah jenis penelitian Anda? (Deskriptif atau Analitik)
+          Apakah jenis penelitian Anda?
         </h2>
       </div>
       <div className="questions__options">

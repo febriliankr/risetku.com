@@ -146,7 +146,7 @@ function BesarSampel() {
           </>
         )}
 
-        {mulai ? (
+        {mulai && analytic ? (
           <>
           <div
             className="selesai__button"
