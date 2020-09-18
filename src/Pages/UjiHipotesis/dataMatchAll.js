@@ -46,8 +46,7 @@ const dataMatchAll = {
       7: "",
     },
     uji: "Chi-square Test",
-    description:
-      "Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square",
+    description: "Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square",
   },
   data5: {
     answer: {
@@ -59,7 +58,9 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "one-way ANOVA",
+    uji: "One-way ANOVA",
+    lanjutan: "Homogen",
+    posthoc: "Tukey"
   },
   data6: {
     answer: {
@@ -107,7 +108,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "paired t-test",
+    uji: "Paired T-Test",
   },
   data10: {
     answer: {
@@ -119,7 +120,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Tidak Normal",
     },
-    uji: "Wilcoxon signed ranks test",
+    uji: "Wilcoxon Signed Ranks Test",
   },
   data11: {
     answer: {
@@ -143,7 +144,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "one-way repeated measures ANOVA",
+    uji: "One-way Repeated Measures ANOVA",
   },
   data13: {
     answer: {
@@ -155,7 +156,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "",
+    uji: "One-way Repeated Measures ANOVA",
   },
   data14: {
     answer: {
@@ -215,43 +216,117 @@ const dataMatchAll = {
       6: "Kategorik",
       7: "",
     },
-    uji: "Regresi logistik sederhana",
+    uji: "Regresi Logistik Sederhana",
   },
   data19: {
     answer: {
       1: "Dua atau lebih",
       2: "Kategorik",
-      3: "dikotom/polikotom",
+      3: "Keduanya",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Numerik",
       7: "Normal",
     },
-    uji: "factorial ANOVA",
+    uji: "Factorial ANOVA",
   },
+  data19b: {
+    answer: {
+      1: "Dua atau lebih",
+      2: "Kategorik",
+      3: "Lebih dari 2 kelompok (Polikotom)",
+      4: "Tidak Berpasangan",
+      5: "Satu",
+      6: "Numerik",
+      7: "Normal",
+    },
+    uji: "Factorial ANOVA",
+  },
+  
+  data19c: {
+    answer: {
+      1: "Dua atau lebih",
+      2: "Kategorik",
+      3: "Dua kelompok (Dikotom)",
+      4: "Tidak Berpasangan",
+      5: "Satu",
+      6: "Numerik",
+      7: "Normal",
+    },
+    uji: "Factorial ANOVA",
+  },
+
   data20: {
     answer: {
       1: "Dua atau lebih",
       2: "Kategorik",
-      3: "dikotom/polikotom",
+      3: "Keduanya",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Numerik",
       7: "Tidak Normal",
     },
-    uji: "ordered logistic regression",
+    uji: "Ordered Logistic Regression",
+  },
+  data20b: {
+    answer: {
+      1: "Dua atau lebih",
+      2: "Kategorik",
+      3: "Lebih dari 2 kelompok (Polikotom)",
+      4: "Tidak Berpasangan",
+      5: "Satu",
+      6: "Numerik",
+      7: "Tidak Normal",
+    },
+    uji: "Ordered Logistic Regression",
+  },
+  data20c: {
+    answer: {
+      1: "Dua atau lebih",
+      2: "Kategorik",
+      3: "Dua kelompok (Dikotom)",
+      4: "Tidak Berpasangan",
+      5: "Satu",
+      6: "Numerik",
+      7: "Tidak Normal",
+    },
+    uji: "Ordered Logistic Regression",
   },
   data21: {
     answer: {
       1: "Dua atau lebih",
       2: "Kategorik",
-      3: "dikotom/polikotom",
+      3: "Keduanya",
       4: "Tidak Berpasangan",
       5: "Satu",
       6: "Kategorik",
       7: "",
     },
-    uji: "regresi logistik faktorial",
+    uji: "Regresi Logistik Faktorial",
+  },
+  data21b: {
+    answer: {
+      1: "Dua atau lebih",
+      2: "Kategorik",
+      3: "Lebih dari 2 kelompok (Polikotom)",
+      4: "Tidak Berpasangan",
+      5: "Satu",
+      6: "Kategorik",
+      7: "",
+    },
+    uji: "Regresi Logistik Faktorial",
+  },
+  data21c: {
+    answer: {
+      1: "Dua atau lebih",
+      2: "Kategorik",
+      3: "Dua kelompok (Dikotom)",
+      4: "Tidak Berpasangan",
+      5: "Satu",
+      6: "Kategorik",
+      7: "",
+    },
+    uji: "Regresi Logistik Faktorial",
   },
   data22: {
     cek: "Dua atau lebih",
@@ -264,7 +339,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "multiple linear regression atau one-way ANCOVA",
+    uji: "Multiple Linear Regression atau One-way ANCOVA",
   },
   data23: {
     answer: {
@@ -276,7 +351,7 @@ const dataMatchAll = {
       6: "Kategorik",
       7: "",
     },
-    uji: "multiple logistic regression",
+    uji: "Multiple Logistic Regression",
   },
   data24: {
     answer: {
@@ -288,7 +363,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "one-way MANOVA",
+    uji: "One-way MANOVA",
   },
   data25: {
     answer: {
@@ -300,7 +375,7 @@ const dataMatchAll = {
       6: "Numerik",
       7: "Normal",
     },
-    uji: "one-way MANCOVA",
+    uji: "One-way MANCOVA",
   },
 };
 

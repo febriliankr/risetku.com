@@ -11,11 +11,10 @@ function Questions({
   questions,
   answers,
   setAnswers,
-  onChange
+  onChange,
+  enableKeduanya3,
 }) {
-
   const handleClick = (option, number) => {
-    
     console.log("option: ", option);
     console.log("number: ", number);
     // answers[number] = option;
@@ -25,6 +24,15 @@ function Questions({
       [number]: option,
     });
   };
+
+  // const renderSwitch() {
+  //   switch() {
+  //     case 'foo':
+  //       return 'bar';
+  //     default:
+  //       return 'foo';
+  //   }
+  // }
 
   return (
     <>
@@ -43,9 +51,22 @@ function Questions({
         </div>
         <div className="questions__options">
           {options.map((option) => {
+            const enableKeduanya = ((!enableKeduanya3) && (option === "Keduanya")) ;
+            console.log('enableKeduanya', enableKeduanya);
             return (
-              <div className="questions__options">
+              <div className="questions__option-buttons">
                 <div
+                  className={`${
+                    answers[number] === option
+                      ? `active-question questions__button`
+                      : `questions__button`
+                  } ${enableKeduanya ? `questions__button-hidden` : null}`}
+                  onClick={() => handleClick(option, number)}
+                >
+                  {option}
+                </div>
+
+                {/* <div
                   className={
                     answers[number] === option
                       ? `active-question questions__button`
@@ -54,7 +75,7 @@ function Questions({
                   onClick={() => handleClick(option, number)}
                 >
                   {option}
-                </div>
+                </div> */}
               </div>
             );
           })}

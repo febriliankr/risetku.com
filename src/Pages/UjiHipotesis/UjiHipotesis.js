@@ -5,14 +5,14 @@ import Questions from "./components/Questions";
 import dataQuestions from "./dataQuestions";
 import dataMatchAll from "./dataMatchAll";
 
-
 function UjiHipotesis() {
-  const [outputToPage, setOutputToPage] = useState('');
+  const [outputToPage, setOutputToPage] = useState("");
   const [selesai, setSelesai] = useState(false);
   const [mulai, setMulai] = useState(false);
-
+  const [enableKeduanya3, setEnableKeduanya3] = useState(false);
   const [show34, setShow34] = useState(false);
   const [show7, setShow7] = useState(false);
+  const [questions, setQuestions] = useState(dataQuestions);
 
   const [answers, setAnswers] = useState({
     1: "",
@@ -35,17 +35,28 @@ function UjiHipotesis() {
     } else if (answers[6] === "Kategorik") {
       setShow7(false);
     }
+    if (answers[1] === "Dua atau lebih" && answers[2] === "Kategorik") {
+      setEnableKeduanya3(true);
+    }
+    if (answers[1] === "Satu") {
+      setEnableKeduanya3(false);
+    }
   }, [answers]);
 
   const selesaiCleanup = () => {
     if (!show34) {
       setAnswers({ ...answers, 3: "", 4: "" });
     }
-
     if (!show7) {
       setAnswers({
         ...answers,
         7: "",
+      });
+    }
+    if ((answers[1] === "Satu")&&(answers[3] === "Keduanya")) {
+      setAnswers({
+        ...answers,
+        3: "",
       });
     }
     determineUjiHipotesis();
@@ -55,19 +66,19 @@ function UjiHipotesis() {
     console.log("MENENTUKAN: ", answers);
     Object.keys(dataMatchAll).map((match) => {
       //console.log(dataMatchAll[match].answer);
-      if (JSON.stringify(dataMatchAll[match].answer)  === JSON.stringify(answers)) {
-        setOutputToPage(JSON.stringify(dataMatchAll[match].uji))
+      if (
+        JSON.stringify(dataMatchAll[match].answer) === JSON.stringify(answers)
+      ) {
+        setOutputToPage(JSON.stringify(dataMatchAll[match].uji));
       } else {
-      console.log('dataMatchAll[match].uji', dataMatchAll[match].uji)
+        console.log("dataMatchAll[match].uji", dataMatchAll[match].uji);
         // console.log(JSON.stringify(dataMatchAll[match].answer));
         // console.log(JSON.stringify(answers));
       }
-    
-    return null;
+
+      return null;
     });
   }
-
-  const [questions, setQuestions] = useState(dataQuestions);
 
   return (
     <div className="uji-hipotesis__container">
@@ -85,6 +96,7 @@ function UjiHipotesis() {
           return (
             <>
               <Questions
+                enableKeduanya3={enableKeduanya3}
                 number={questions[q].number}
                 setQuestions={setQuestions}
                 questions={questions}

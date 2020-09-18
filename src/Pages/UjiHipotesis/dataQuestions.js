@@ -14,7 +14,7 @@ const dataQuestions = {
     number: 3,
     question:
       "Apakah variabel bebas Anda terdiri dari 2 kelompok atau lebih dari 2 kelompok?",
-    options: ["Dua kelompok (Dikotom)", "Lebih dari 2 kelompok (Polikotom)"],
+    options: ["Dua kelompok (Dikotom)", "Lebih dari 2 kelompok (Polikotom)", "Keduanya"],
   },
   4: {
     number: 4,
