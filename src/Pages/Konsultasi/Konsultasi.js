@@ -14,7 +14,7 @@ function Konsultasi() {
             ini.
           </p>
           <p className="konsultasi__subsection-text">
-            Seluruh pertanyaan Anda bisa dikirimkan ke email: risetku@gmail.com
+            Seluruh pertanyaan Anda bisa dikirimkan ke email: elvanwiyarta@gmail.com
           </p>
         </div>
       </div>

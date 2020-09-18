@@ -95,8 +95,19 @@ function UjiHipotesis() {
             textAlign: "center",
           }}
         >
-          <p>Uji hipotesis yang cocok untuk penelitian Anda adalah</p>
-          <h1>{theAnswerToEverything}</h1>
+          <p
+          style={{color: '#a5a5a5'}}
+          >Uji hipotesis yang cocok untuk penelitian Anda adalah</p>
+          <h1
+          style={{color: '#e9e9e9'}}
+          >{theAnswerToEverything}</h1>
+          {
+            (theAnswerToEverything === `"Chi-square Test"`) ? (
+              <p 
+              style={{color: '#a5a5a5'}}
+              >Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square</p>
+            ) : null
+          }
         </div>
       ) : selesai ? (
         <div

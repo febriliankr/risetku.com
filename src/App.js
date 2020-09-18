@@ -17,6 +17,7 @@ function App() {
           <Route path="/uji-hipotesis" component={UjiHipotesis}/>
           <Route path="/hitung-besar-sampel" component={BesarSampel}/>
           <Route path="/konsultasi" component={Konsultasi}/>
+          <Route path="/perpustakaan" component={Konsultasi}/>
         </Switch>
         <Footer/>
       </BrowserRouter>
