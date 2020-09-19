@@ -8,10 +8,10 @@ function Footer() {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <Link to="/"><h2>Konsultasi</h2></Link>
+            <Link to="/konsultasi"><h2>Konsultasi</h2></Link>
           </div>
           <div className="footer-link-items">
-            <Link to="/"><h2>FAQ</h2></Link>
+            <Link to="/faq"><h2>FAQ</h2></Link>
           </div>
         </div>
       </div>

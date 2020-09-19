@@ -5,7 +5,8 @@ import Questions from "./components/Questions";
 import dataQuestions from "./dataQuestions";
 import dataMatchAll from "./dataMatchAll";
 import Subsection from "../../components/Subsection/Subsection";
-import subsectionUjiHipotesisOne from './data/subsectionUjiHipotesisOne'
+import subsectionUjiHipotesisOne from "./data/subsectionUjiHipotesisOne";
+import ReactTooltip from "react-tooltip";
 
 function UjiHipotesis() {
   let outputToPage = "";
@@ -97,19 +98,15 @@ function UjiHipotesis() {
             textAlign: "center",
           }}
         >
-          <p
-          style={{color: '#a5a5a5'}}
-          >Uji hipotesis yang cocok untuk penelitian Anda adalah</p>
-          <h1
-          style={{color: '#e9e9e9'}}
-          >{theAnswerToEverything}</h1>
-          {
-            (theAnswerToEverything === `"Chi-square Test"`) ? (
-              <p 
-              style={{color: '#a5a5a5'}}
-              >Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square</p>
-            ) : null
-          }
+          <p style={{ color: "#a5a5a5" }}>
+            Uji hipotesis yang cocok untuk penelitian Anda adalah
+          </p>
+          <h1 style={{ color: "#e9e9e9" }}>{theAnswerToEverything}</h1>
+          {theAnswerToEverything === `"Chi-square Test"` ? (
+            <p style={{ color: "#a5a5a5" }}>
+              Gunakan Fisher’s exact test jika tidak memenuhi syarat Chi-square
+            </p>
+          ) : null}
         </div>
       ) : selesai ? (
         <div
@@ -172,8 +169,20 @@ function UjiHipotesis() {
         </div>
       ) : null}
 
-      <Subsection title={subsectionUjiHipotesisOne.title} text={subsectionUjiHipotesisOne.text} />
-
+      <Subsection
+        title={subsectionUjiHipotesisOne.title}
+        text={subsectionUjiHipotesisOne.text}
+      />
+      <ReactTooltip />
+      <p
+        style={{
+          fontSize: "10px",
+          color: "grey",
+        }}
+        data-tip={`${JSON.stringify(answers)}`}
+      >
+        Debug
+      </p>
     </div>
   );
 }
