@@ -169,21 +169,23 @@ function UjiHipotesis() {
         </div>
       ) : null}
 
+      <ReactTooltip />
+      <p
+        style={{
+          marginLeft: '10px',
+          fontSize: "9px",
+          color: "grey",
+          width: "fit-content",
+        }}
+        data-tip={`${JSON.stringify(answers)}`}
+      >
+        Debug?
+      </p>
+
       <Subsection
         title={subsectionUjiHipotesisOne.title}
         text={subsectionUjiHipotesisOne.text}
       />
-      <ReactTooltip />
-      <p
-        style={{
-          fontSize: "10px",
-          color: "grey",
-          width: 'fit-content'
-        }}
-        data-tip={`${JSON.stringify(answers)}`}
-      >
-        Debug
-      </p>
     </div>
   );
 }
