@@ -178,6 +178,7 @@ function UjiHipotesis() {
         style={{
           fontSize: "10px",
           color: "grey",
+          width: 'fit-content'
         }}
         data-tip={`${JSON.stringify(answers)}`}
       >
